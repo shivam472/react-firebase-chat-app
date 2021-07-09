@@ -1,0 +1,88 @@
+.button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+}
+
+.chat-container {
+  max-width: 85%;
+  width: 32rem;
+  height: 38rem;
+  max-height: 75%;
+  margin: auto;
+  border: 1px solid #e4e5e6;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 1px 0 5px 1px #e4e5e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.messagesContainer {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  height: 33rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.messagesContainer::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.message {
+  display: flex;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 3000px;
+  box-shadow: 0 0 10px rgb(164, 164, 164);
+  align-items: center;
+}
+
+.sent {
+  background-color: #395dff;
+  color: white;
+  border-top-right-radius: 1000px;
+  flex-direction: row-reverse;
+  text-align: end;
+  float: right;
+}
+
+.sent p {
+  margin-right: 8px;
+}
+
+.received {
+  border: 1px solid lightgray;
+  background-color: #fafafa;
+  border-top-left-radius: 1000px;
+  float: left;
+}
+
+.received p {
+  margin-left: 8px;
+}
+
+.message img {
+  border-radius: 50%;
+  height: 33px;
+  width: 33px;
+}
+
+.delete {
+  margin: 2px;
+  cursor: pointer;
+  color: red;
+}
