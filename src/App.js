@@ -35,14 +35,14 @@ function App() {
           </Route>
 
           {user && (
-            <Route path="/chat">
-              <ChatPage />
+            <Route path="/profile">
+              <ProfilePage />
             </Route>
           )}
 
           {user && (
-            <Route path="/profile">
-              <ProfilePage />
+            <Route path="/chat">
+              <ChatPage />
             </Route>
           )}
 

@@ -14,7 +14,7 @@ const Profile = () => {
   const [profileImage, setProfileImage] = useState(blankProfileImage);
   const [imgLoading, setImgLoading] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [imgUploadsuccess, setImgUploadSuccess] = useState(false);
   const [choosePhotoClicked, setChoosePhotoClicked] = useState(false);
 
   const [file, setFile] = useState(null);
@@ -30,7 +30,7 @@ const Profile = () => {
   }, []);
 
   const imageChangeHandler = (e) => {
-    setSuccess(false);
+    setImgUploadSuccess(false);
     const reader = new FileReader();
     reader.onloadend = () => {
       if (reader.readyState === 2) {
@@ -47,7 +47,7 @@ const Profile = () => {
     uploadHandler = (e) => {
       e.preventDefault();
       authCtx.createProfile();
-      setSuccess(true);
+      setImgUploadSuccess(true);
     };
   } else {
     uploadHandler = (e) => {
@@ -76,7 +76,7 @@ const Profile = () => {
 
       setIsUploading(false);
       authCtx.createProfile();
-      setSuccess(true);
+      setImgUploadSuccess(true);
       //   console.log("profile updated");
     };
   }
@@ -90,7 +90,7 @@ const Profile = () => {
       <section className={classes["profile-container"]}>
         <form className={classes.form}>
           <h1>Add a Profile Photo</h1>
-          {success && (
+          {imgUploadsuccess && (
             <p style={{ color: "green", fontWeight: "550" }}>
               Upload SuccessFull!
             </p>
